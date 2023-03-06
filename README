@@ -1,0 +1,16 @@
+This program uses the Yelp dataset business .JSON file as input.
+Editing of the filepath is most likely required ( Located within class variables ).
+
+This program uses the gson library to parse the .JSON file
+TO ADD GSON JAR WITHIN ECLIPSE IDE:
+  On Computer:
+    Create folder for .JAR files within an easily accessable place ( ex. Documents/JARFiles )
+    Add gson.jar file, located within this directory, to .JAR file folder
+  Within Eclipse:
+    In Package Explorer, right-click on Java Project containing YelpDatasetSimilarBusinesses.java
+    Build Path -> Configure Build Path -> Libraries -> Classpath -> Add External JARs...
+    Locate the .JAR file folder containing the gson.jar file and select it
+    Click Apply and Close
+    
+The program will select the first 10,000 entries from the .JSON file and use TFIDF with Cosine Similarity between the categories of the businesses to
+calculate and return the 2 most similar businesses that aren't the searched business in specific.
